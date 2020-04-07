@@ -2,7 +2,7 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://hanane2495.github.io/MBJ",
+  "homepage":"https://hanane2495.github.io/mbjournal",
   "engines": {
     "node": "11.11.0",
     "npm": "6.7.0"
