@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/mbjournal/static/css/main.3d2492d8.chunk.css",
+    "main.js": "/mbjournal/static/js/main.bb84b594.chunk.js",
+    "main.js.map": "/mbjournal/static/js/main.bb84b594.chunk.js.map",
+    "runtime-main.js": "/mbjournal/static/js/runtime-main.d90803f0.js",
+    "runtime-main.js.map": "/mbjournal/static/js/runtime-main.d90803f0.js.map",
+    "static/js/2.e468baa6.chunk.js": "/mbjournal/static/js/2.e468baa6.chunk.js",
+    "static/js/2.e468baa6.chunk.js.map": "/mbjournal/static/js/2.e468baa6.chunk.js.map",
+    "index.html": "/mbjournal/index.html",
+    "precache-manifest.ca095129127c2f30a0f0bf0c4a49a9b5.js": "/mbjournal/precache-manifest.ca095129127c2f30a0f0bf0c4a49a9b5.js",
+    "service-worker.js": "/mbjournal/service-worker.js",
+    "static/css/main.3d2492d8.chunk.css.map": "/mbjournal/static/css/main.3d2492d8.chunk.css.map",
+    "static/js/2.e468baa6.chunk.js.LICENSE.txt": "/mbjournal/static/js/2.e468baa6.chunk.js.LICENSE.txt",
+    "static/media/adn.jpg": "/mbjournal/static/media/adn.98aaacb5.jpg",
+    "static/media/background5.png": "/mbjournal/static/media/background5.10f3472e.png",
+    "static/media/background6.png": "/mbjournal/static/media/background6.d11cbca7.png",
+    "static/media/editor.jpg": "/mbjournal/static/media/editor.3852040e.jpg",
+    "static/media/medical bio-08.png": "/mbjournal/static/media/medical bio-08.7815453f.png",
+    "static/media/medical bio-09.png": "/mbjournal/static/media/medical bio-09.ec189ab0.png",
+    "static/media/virus.jpg": "/mbjournal/static/media/virus.8df473f8.jpg",
+    "static/media/virus2.jpg": "/mbjournal/static/media/virus2.c54c52f1.jpg",
+    "static/media/virus3.jpg": "/mbjournal/static/media/virus3.8bcaadbd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d90803f0.js",
+    "static/js/2.e468baa6.chunk.js",
+    "static/css/main.3d2492d8.chunk.css",
+    "static/js/main.bb84b594.chunk.js"
+  ]
+}
