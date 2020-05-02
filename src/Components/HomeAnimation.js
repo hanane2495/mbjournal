@@ -4,155 +4,154 @@ import styled from 'styled-components';
 
 //styled components
 const Styles = styled.div`
-
     #Ellipse-1{
     position: absolute;
-    left: 500px;
-    top: 600px;
+    left: 90vw;
+    top: 40vh;
     }
 
     #Ellipse-2{
     position: absolute;
-    left: 250px;
-    top: 450px;
+    left: 12vw;
+    top: 70vh;
     }
 
     #Ellipse-3{
     position: absolute;
-    left: 400px;
-    top: 100px;
+    left: 18vw;
+    top: 50vh;
     }
 
     #Ellipse-4{
     position: absolute;
-    left: 1200px;
-    top: 420px;
+    left: 50vw;
+    top: 68vh;
     }
 
     #Ellipse-5{
     position: absolute;
-    left: 800px;
-    top: 630px;
+    left: 80vw;
+    top: 70vh;
     }
 
     #Ellipse-6{
     position: absolute;
-    left: 300px;
-    top: 350px;
+    left: 10vw;
+    top: 40vh;
     }
 
     #Ellipse-7{
     position: absolute;
-    left: 800px;
-    top: 150px;
+    left: 70vw;
+    top: 20vh;
     }
 
     #Ellipse-8{
     position: absolute;
-    left: 1000px;
-    top: 100px;
+    left: 30vw;
+    top: 15vh;
     }
 
     #Ellipse-9{
     position: absolute;
-    left: 600px;
-    top: 430px;
+    left: 60vw;
+    top: 58vh;
     }
 
     #Ellipse-10{
     position: absolute;
-    left: 50px;
-    top: 620px;
+    left: 40vw;
+    top: 70vh;
     }
 
     #Ellipse-11{
     position: absolute;
-    left: 100px;
-    top: 270px;
+    left: 5vw;
+    top: 20vh;
     }
 
     #Ellipse-12{
     position: absolute;
-    left: 400px;
-    top: 280px;
+    left: 3vw;
+    top: 40vh;
     }
 
     #Ellipse-13{
     position: absolute;
-    left: 1200px;
-    top: 260px;
+    left: 90vw;
+    top: 28vh;
     }
 
     #Ellipse-14{
     position: absolute;
-    left: 1100px;
-    top: 540px;
+    left: 85vw;
+    top: 60vh;
     }
 
     #Ellipse-15{
     position: absolute;
-    left: 100px;
-    top: 100px;
+    left: 60vw;
+    top: 15vh;
     }
 
     #Ellipse-16{
     position: absolute;
-    left: 800px;
-    top: 370px;
+    left: 65vw;
+    top: 40vh;
     }
 
     #Ellipse-17{
     position: absolute;
-    left: 1000px;
-    top: 320px;
+    left: 75vw;
+    top: 45vh;
     }
 
     #Ellipse-18{
     position: absolute;
-    left: 600px;
-    top: 250px;
+    left: 48vw;
+    top: 20vh;
     }
 
     #virus{
       position : absolute;
-      left : 1000px;
-      top: 180px;
+      left : 80vw;
+      top: 18vh;
     }
 
     #atom{
       position : absolute;
-      left : 200px;
-      top: 170px;
+      left : 15vw;
+      top: 20vh;
     }
 
     #flask{
       position : absolute;
-      left : 900px;
-      top: 510px;
+      left : 70vw;
+      top: 60vh;
     }
 
     #microscope{
       position : absolute;
-      left : 600px;
-      top: 120px;
+      left : 58vw;
+      top: 18vh;
     }
 
     #adn{
       position : absolute;
-      left : 400px;
-      top: 500px;
+      left : 23vw;
+      top: 58vh;
     }
 
     #test-tube{
       position : absolute;
-      left : 80px;
-      top: 450px;
+      left : 5vw;
+      top: 55vh;
     }
 
     #mollecule{
       position : absolute;
-      left : 1100px;
-      top: 450px;
+      left : 90vw;
+      top: 65vh;
     }
 
     #Ellipse-17,  #Ellipse-15,  #Ellipse-13,  #Ellipse-11,  #Ellipse-9,  #Ellipse-7,  #Ellipse-5,  #Ellipse-3,  #Ellipse-1{
@@ -187,7 +186,7 @@ function HomeAnimation() {
       <React.Fragment>
           <Styles>
           <div id="Ellipse-1">
-                <svg width="30" height="30" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="10%" height="10%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle  cx="6" cy="6" r="6" fill="#c6d8f9" fill-opacity="0.2"/>
                 </svg>
           </div>
@@ -240,7 +239,7 @@ function HomeAnimation() {
     </div>
 
     <div id="Ellipse-10"> 
-        <svg width="30" height="30" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="10" height="10" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle  cx="4" cy="4" r="4" fill="#E87C19" fill-opacity="0.4"/>
         </svg>
     </div>
@@ -294,7 +293,7 @@ function HomeAnimation() {
     </div>
 
     <div id='virus'>
-      <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="virus" opacity="0.4">
           <g id="Group">
             <path id="Vector" d="M24.1379 4.31033H25.8621V9.48275H24.1379V4.31033Z" fill="#83DDF2"/>
@@ -351,7 +350,7 @@ function HomeAnimation() {
    </div>
 
    <div id='atom'>
-      <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="atom" opacity="0.4">
         <g id="atom 1">
           <path id="Vector" d="M8.57052 2.58167C8.57052 2.58167 9.32122 5.36982 11.483 5.49931C11.483 5.49931 8.59762 6.49566 8.54901 8.62732C8.54901 8.62732 7.98071 5.63783 5.70192 5.53071C5.70192 5.53071 8.35628 5.12847 8.57052 2.58167Z" fill="#83DDF2"/>
@@ -386,7 +385,7 @@ function HomeAnimation() {
       </svg>
     </div>
     <div id='flask'>
-        <svg width="70" height="70" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="10vw" height="10vh" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="flask" opacity="0.4">
               <path id="Vector" d="M49.1266 39.592L33.7188 13.8053V3.48751H37.2063V0H12.7937V3.48751H16.2812V13.8053L0.873399 39.592C-1.5574 43.6602 1.37386 48.8252 6.11164 48.8252H43.8866C48.6261 48.8252 51.5574 43.6602 49.1266 39.592Z" fill="#CDDCF0"/>
               <path id="Vector_2" opacity="0.25" d="M16.2812 3.48749V6.975H33.7187C33.7187 5.45989 33.7187 4.11546 33.7187 3.48749C27.4088 3.48749 22.5912 3.48749 16.2812 3.48749Z" fill="#BECFE4"/>
@@ -405,7 +404,7 @@ function HomeAnimation() {
     </svg>
     </div>
     <div id='microscope'>
-      <svg width="60" height="60" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Microscope">
           <g id="microscope 1" opacity="0.4">
           <g clip-path="url(#clip0)">
@@ -429,13 +428,13 @@ function HomeAnimation() {
           </g>
           <defs>
           <clipPath id="clip0">
-          <rect width="50" height="50" fill="white"/>
+          <rect width="100" height="100" fill="white"/>
           </clipPath>
           </defs>
       </svg>
     </div>
     <div id='adn'>
-      <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="ADN" opacity="0.4">
               <path id="Vector" d="M12.9291 33.1803C5.30266 33.1031 3.04112 33.3944 0.562088 35.8737C-0.187003 36.6228 -0.187722 37.8368 0.562088 38.5865C1.3119 39.3362 2.52582 39.3356 3.27491 38.5865C4.70091 37.1605 6.18135 36.949 12.9817 37.0183C12.968 35.6788 12.9487 34.4751 12.9291 33.1803Z" fill="#CDDCF0"/>
               <path id="Vector_2" d="M16.8197 37.0709L18.7242 37.0999C18.713 35.9384 18.6935 34.666 18.6716 33.2624L16.7663 33.2337C16.786 34.5503 16.8057 35.6856 16.8197 37.0709Z" fill="#264C78"/>
@@ -462,7 +461,7 @@ function HomeAnimation() {
       </svg>
     </div>
     <div id='test-tube'>
-      <svg width="70" height="70" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="test-tube">
           <g id="test-tube (1) 1" opacity="0.4">
               <path id="Vector" d="M25.7812 24.6614V16.4551H19.5312V24.6614C14.1399 26.049 10.1562 30.9432 10.1562 36.7676C10.1562 43.6711 15.7527 49.2676 22.6562 49.2676C29.5598 49.2676 35.1562 43.6711 35.1562 36.7676C35.1562 30.9431 31.1726 26.049 25.7812 24.6614Z" fill="#B4EBFA"/>
@@ -510,7 +509,7 @@ function HomeAnimation() {
       </svg>
     </div>
     <div id='mollecule'>
-        <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="10vw" height="10vh" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="mollecule">
             <g id="molecule 1" opacity="0.4">
             <g id="flat">

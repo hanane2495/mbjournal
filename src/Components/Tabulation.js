@@ -18,24 +18,63 @@ const Styles = styled.div`
     }
     a{
         font-weight: bold;
-        font-size:20px;
+        font-size:1.2em;
         color: rgba(63,63,179,1);
         &:hover{
             color:rgba(240, 85, 18, 0.83);
         }
+        @media only screen and (max-width: 790px) {
+           font-size:1rem
+        }
+        @media only screen and (max-width: 490px) {
+           font-size:0.8rem
+        }
+        @media only screen and (max-width: 330px) {
+           font-size:0.5rem
+        }
 
     }
-    .card{
-        margin:20px;
+    .latest-articles-card{
+        width: 100%;
+        margin:3% 0;
         box-shadow:5px 10px 20px 1px rgba(0, 0, 0, 0.253);
         overflow:hidden;
     }
     .card-title{
         color:rgba(240, 85, 18, 0.83);
+        @media only screen and (max-width: 790px) {
+           font-size:1.3rem
+        }
+        @media only screen and (max-width: 490px) {
+           font-size:1rem
+        }
+        @media only screen and (max-width: 320px) {
+           font-size:0.8rem
+        }
+    }
+    .card-subtitle{
+        @media only screen and (max-width: 790px) {
+           font-size:1rem
+        }
+        @media only screen and (max-width: 490px) {
+           font-size:0.8rem
+        }
+        @media only screen and (max-width: 320px) {
+           font-size:0.6rem
+        }
     }
     .article-links{
-        font-size:16px;
+        font-size:1rem;
         color:rgba(63,63,179,1);
+        @media only screen and (max-width: 370px) {
+           font-size:0.7rem
+        }
+        @media only screen and (max-width: 490px) {
+           font-size:0.8rem
+        }
+        @media only screen and (max-width: 320px) {
+           font-size:0.6rem
+        }
         &:hover{
             color:rgba(240, 85, 18, 0.83);
             background:#fff;
@@ -48,6 +87,7 @@ const Styles = styled.div`
         display:flex;
          justify-content: center;
          align-items: center;
+         font-size:1rem;
          padding: 10px 0 20px 0;
          &:hover{
             color:rgba(240, 85, 18, 0.83);
@@ -56,6 +96,7 @@ const Styles = styled.div`
             
         }
     }
+    
 `;
 
 function Tabulation() {
@@ -69,7 +110,7 @@ function Tabulation() {
                   <Tabs defaultActiveKey="Latest articles" id="uncontrolled-tab-example">
                         <Tab eventKey="Latest articles" title="Latest articles">
                             <Container>
-                                <Card style={{ width: '65rem' }}>
+                                <Card className='latest-articles-card'>
                                     <Card.Body>
                                         <Card.Title>A pooled analysis of risk factors of surgically treated leiomyosarcoma of the colon in adults</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">Yun Wang, Hao Wang, Zhi-Lu Yuan, Jing-Fei Zhao, Dian-Bo Dong and Qian Gao</Card.Subtitle>
@@ -97,7 +138,7 @@ function Tabulation() {
                                         </Card.Link>
                                     </Card.Body>
                                 </Card>
-                                <Card style={{ width: '65rem' }}>
+                                <Card className='latest-articles-card'>
                                     <Card.Body>
                                         <Card.Title>A pooled analysis of risk factors of surgically treated leiomyosarcoma of the colon in adults</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">Yun Wang, Hao Wang, Zhi-Lu Yuan, Jing-Fei Zhao, Dian-Bo Dong and Qian Gao</Card.Subtitle>
@@ -125,7 +166,7 @@ function Tabulation() {
                                         </Card.Link>
                                     </Card.Body>
                                 </Card>
-                                <Card style={{ width: '65rem' }}>
+                                <Card className='latest-articles-card'>
                                     <Card.Body>
                                         <Card.Title>A pooled analysis of risk factors of surgically treated leiomyosarcoma of the colon in adults</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">Yun Wang, Hao Wang, Zhi-Lu Yuan, Jing-Fei Zhao, Dian-Bo Dong and Qian Gao</Card.Subtitle>
@@ -155,7 +196,7 @@ function Tabulation() {
                                 </Card>
                                 <Collapse in={open}>
                                     <div id="example-collapse-text">
-                                    <Card style={{ width: '65rem' }}>
+                                    <Card className='latest-articles-card'>
                                         <Card.Body>
                                             <Card.Title>A pooled analysis of risk factors of surgically treated leiomyosarcoma of the colon in adults</Card.Title>
                                             <Card.Subtitle className="mb-2 text-muted">Yun Wang, Hao Wang, Zhi-Lu Yuan, Jing-Fei Zhao, Dian-Bo Dong and Qian Gao</Card.Subtitle>
@@ -184,7 +225,7 @@ function Tabulation() {
                                         </Card.Body>
                                     </Card>
 
-                                    <Card style={{ width: '65rem' }}>
+                                    <Card className='latest-articles-card'>
                                         <Card.Body>
                                             <Card.Title>A pooled analysis of risk factors of surgically treated leiomyosarcoma of the colon in adults</Card.Title>
                                             <Card.Subtitle className="mb-2 text-muted">Yun Wang, Hao Wang, Zhi-Lu Yuan, Jing-Fei Zhao, Dian-Bo Dong and Qian Gao</Card.Subtitle>

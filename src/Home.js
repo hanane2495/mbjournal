@@ -1,5 +1,5 @@
 //libraries
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {Jumbotron, Button, InputGroup, FormControl, Container, Col, Row} from 'react-bootstrap';
 import styled from 'styled-components';
@@ -9,6 +9,9 @@ import styled from 'styled-components';
 import HomeAnimation from './Components/HomeAnimation';
 import Fields from './Components/Fields'
 import Tabulation from './Components/Tabulation';
+
+//icons
+import {FiSearch} from 'react-icons/fi'
 
 
 //images
@@ -23,46 +26,54 @@ const Styles = styled.div`
     .jumbotron{
       transition : 0.4s;
       border-radius : 0;
-      height : 400px;
+      height : 65vh;
       background: linear-gradient(0deg, rgba(63,63,179,1) 0%, rgba(14,14,99,1) 55%, rgba(2,0,36,1) 100%);  
-      align-items:center;
-      transition:0.4s;
+      font-size:36px;
+      @media only screen and (max-width: 790px) {
+           font-size:30px
+        }
+        @media only screen and (max-width: 590px) {
+           font-size:22px
+        }
+        @media only screen and (max-width: 450px) {
+           font-size:15px
+        }
     }
      
-    #landing_div{
-        width: 60%;
-        margin: 20px auto;
-        padding: 20px;
-        
-    }
-
-    #landing_text_1{
-        color: white;
-        font-weight: bolder;
-        text-align : center;
-        padding : 5px;
-    }
-    #landing_text_2{
-        color: white;
-        font-weight: bolder;
-        text-align : center;
-        margin-top : 15px;
-    }
-    
     #suggested{
         color : white;
         opacity: 0.5;
         text-align:center;
-        font-size:12px;
-        padding:10px;
+        font-size:0.5em;
+        padding:2vh;
+    }
+    .content{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding-top:8vh;
     }
 
     .input-group {
-        padding : 15px;
-        margin : auto;
-        width:60% !important;
-        height:60% !important;
-       
+        width:45vw;
+        height:9vh;
+        @media only screen and (max-width: 790px) {
+            width:59vw;
+            height:8vh;
+        }
+        @media only screen and (max-width: 490px) {
+            width:70vw;
+            height:8vh;
+        }
+    }
+    .form-control{
+        height:100%;
+    }
+    .content-text{
+        font-size:1em;
+        font-weight:bolder;
+        color:white;
     }
 
     .btn-outline-secondary{
@@ -81,39 +92,84 @@ const Styles = styled.div`
         position:relative;
         background-position:center;
         background-attachment:fixed;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        font-size:36px;
+        @media only screen and (max-width: 790px) {
+           font-size:30px
+        }
+        @media only screen and (max-width: 490px) {
+           font-size:28px
+        }
+        @media only screen and (max-width: 380px) {
+           font-size:22px
+        }
     }
     .submit-text{
-        position:absolute;
-        top:30%;
         width:100%;
         color:white;
+        font-size:1em;
         text-shadow: 10px black;
         text-align:center;
-        font-size:40px;
         font-weight:bolder;
     }
     .submit-button{
         background: rgba(240, 85, 18, 0.83);
         color:white;
-        width:300px;
-        height:50px;
+        height:auto;
+        width:30%;
         border:none;
         border-radius:5px;
-        font-size:25px;
         font-weight:900;
+        font-size:0.8em;
+        margin-top:1%;
         &:hover{
             color:rgba(63,63,179,1);
             text-decoration:none;
-            
+        }
+        @media only screen and (max-width: 790px) {
+           width:30%;
+           margin-top:3%;
+        }
+        @media only screen and (max-width: 490px) {
+           width:60%;
+           margin-top:3%;
+        }
+        @media only screen and (max-width: 380px) {
+           width:60%;
+           margin-top:3%;
         }
     }
-    .big_title1{
+    
+    
+    .about-section{
+        background-image:url(${background_1});
+        position:relative;
+        background-attachment:scroll;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:2% 5%;
+        font-size:36px;
+        @media only screen and (max-width: 790px) {
+           font-size:30px;
+           text-align:center;
+        }
+        @media only screen and (max-width: 320px) {
+           font-size:28px;
+           text-align:center;
+        }
+    }
+    .big_title{
         color: rgba(63,63,179,1);
         font-weight:700;
-        margin-top :20px;
-        padding: 20px;
+        font-size:1em;
         text-align:center;
-
         &:after{
             content:"";
              background: rgba(63,63,179,1);
@@ -123,53 +179,135 @@ const Styles = styled.div`
              margin: 5px auto 20px; 
              
         }
+        @media only screen and (max-width: 790px) {
+           margin:5% 0;
+        }
+        @media only screen and (max-width: 320px) {
+            margin:5% 0;
+        }
     }
-    .about{
-        text-align:Left;
-        font-size:18px;
-        padding: 10px;
+    .section-row{
+        display:flex;
+        flex-direction:row;
+        @media only screen and (max-width: 790px) {
+            flex-direction:column;
+        }
     }
 
-    .fields_text{
-        padding :10px;
-        font-size:20px;
+    .section-column{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding-top:2%;
+    }
+    .section-column-editor{
+        display:flex;
+        flex-direction:column;
+        align-items:left;
+        padding:1% 5%;
+    }
+    .editor-title{
+       text-align:left; 
+       font-size:0.7em;
+       font-weight:bold;
+       color:#777;
+       @media only screen and (max-width: 790px) {
+            text-align:center;
+        }
+        @media only screen and (max-width: 320px) {
+            text-align:center;
+        }
+    }
+    .editor-description{
+        font-size:0.5em;
+        @media only screen and (max-width: 790px) {
+            text-align:center;
+        }
+        @media only screen and (max-width: 320px) {
+            text-align:center;
+        }
     }
     
-    .about-section{
-        background-image:url(${background_1});
-        position:relative;
-        background-attachment:scroll;
+    .about{
+        text-align:Left;
+        font-size:0.5em;
+        @media only screen and (max-width: 790px) {
+            text-align:center;
+        }
+        @media only screen and (max-width: 320px) {
+            text-align:center;
+        }
     }
-
-    .cercle{
-        position:relative;
-        top:50px;
-        left:90px;
+    .logo{
+        padding-bottom:7%;
+        height: 45vh; 
+        width:35vw;
+        @media only screen and (max-width: 790px) {
+            height: 40vh; 
+            width:60vw;
+        }
+        @media only screen and (max-width: 320px) {
+            height:40vh; 
+            width:100vw;
+        }
     }
 `;
+
+function useWindowSize() {
+    const isClient = typeof window === 'object';
+  
+    function getSize() {
+      return {
+        width: isClient ? window.innerWidth : undefined,
+        height: isClient ? window.innerHeight : undefined
+      };
+    }
+  
+    const [windowSize, setWindowSize] = useState(getSize);
+  
+    useEffect(() => {
+      if (!isClient) {
+        return false;
+      }
+      
+      function handleResize() {
+        setWindowSize(getSize());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+  
+    return windowSize;
+  }
+
 
 //Home page 
 function Home() {
 
     //collapse abstract
     const [open, setOpen] = useState(false);
+    //window size
+    const size = useWindowSize();
 
     return (
         <React.Fragment>
           <Styles>
             <Jumbotron fluid>
                 <HomeAnimation/>
-                <div className='container-fluid' id='landing_div'>
-                    <h2 id='landing_text_1'>Discover Medical Knowledge And stay </h2>
-                    <h2 id='landing_text_2'> connected to The World of Biology. </h2>
-                    <InputGroup>
+                <div className='content'>
+                    <p className='content-text'>Discover Medical Knowledge And stay </p>
+                    <p className='content-text'> connected to The World of Biology. </p>
+                    <InputGroup className='search-section'>
                         <FormControl
                           placeholder="Search for articles..."
                           aria-label="search"
                           aria-describedby="basic-addon2"
                         />
                         <InputGroup.Append>
-                           <Button classeName='search-button' variant="outline-secondary">Search</Button>
+                           <Button classeName='search-button' variant="outline-secondary">
+                               { size.width< 790 ? <FiSearch/> : 'Search' }
+                            </Button>
                         </InputGroup.Append>
                     </InputGroup>
                    <p id='suggested'>Suggested : Title of articles, Author's name, subject, field... </p>
@@ -182,70 +320,72 @@ function Home() {
                     <Button className='submit-button'>Submit an article</Button>
                 </div>
             </div>
-            <section className='about-section'>
-            <section >
-                <Container>
-                    <Row style={{ paddingTop:'100px'}}>
-                        <Col >
-                            <h3 className='big_title1'>A bout Our Journal</h3>
+                <section className='about-section'> 
+                    <h3 className='big_title'>A bout Our Journal</h3> 
+                    <div className='section-row'>
+                        <div className='section-column'>
                             <p className='about'>
                                 Medical and Biology Journal is a peer-reviewed, open access, current periodical journal belonging 
                                 to the Department of Family Medicine of Yıldırım Beyazıt University, Faculty of Medicine.<br/>
                                 All article evaluation and publishing processes are completely afree of charge. 
-                                Our journal is published four times annually and is listed in DOAJ, DRJI, EBSCOhost, Google Scholar, 
-                                HINARI, Index Copernicus, J-Gate, Journal Index, Journal TOCs, SHERPA/RoMEO.<br/>
+                                Our journal is published four times annually and is listed in EBSCOhost, Google Scholar.
+                                <br/>
                                 Our Journal covers the following fields :<br/>
-                            </p>
+                            
                             <Link 
-                                className='article-links'
                                 onClick={() => setOpen(!open)}
                                 aria-controls="example-collapse-text"
                                 aria-expanded={open}
-                                style={{ marginTop:'20px', paddingLeft:'10px'}}
+                                style={{ marginTop:'2%'}}
                                 > 
                                 Read more
                             </Link>
-                        </Col> 
-                        <Col>
-                            <div className='cercle'>
-                            <svg width="446" height="418" viewBox="0 0 446 418" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="346" cy="100" r="100" fill="#E87C19" fill-opacity="0.1"/>
-                                <circle cx="50" cy="346" r="50" fill="#E87C19" fill-opacity="0.2"/>
-                                <circle cx="200" cy="218" r="200" fill="#B4EBFA" fill-opacity="0.2"/>
-                            </svg>
-                                <img style={{ height: '350px', width:'550px', position:'absolute',left:'-70px',top:'40px'  }} src={logo}/>
-                            </div>
-                        </Col>
-                    </Row>     
-                </Container>
-            </section>
-            <section>    
-                <Container>
-                    <Row style={{ paddingTop:'100px', paddingBottom:'100px'}}>
-                        <Col>
-                          <img style={{  boxShadow:'5px 10px 20px 1px rgba(0, 0, 0, 0.253)', height: '20rem', width:'30rem', marginTop:'50px' }} src={editor}/>
-                        </Col>
-                        <Col>
-                            <h3 className='big_title1'>Editor-in-chief</h3>
-                            <h3>Professor YAFOUR Nabil, EHU, Algeria</h3>
-                            <p>Dr. Yafour's research has centred on screening, early detection and treatment of oral cancer
+                            </p>
+                        </div>            
+                        <div className='section-column'>
+                             <img alt='Medical and biology journal' src={logo} className='logo'/>
+                        </div>
+                    </div>
+                </section>
+                <section className='about-section'>  
+                    <h3 className='big_title'>Editor-in-chief</h3>
+                    <div className='section-row'>
+                        <div className='section-column-editor'>
+                            <h3 className='editor-title'>Professor YAFOUR, EHU, Algeria</h3>
+                            <p className='editor-description'>Dr. Yafour's research has centred on screening, early detection and treatment of oral cancer
                                 . His aspiration for high quality research for cancer can be seen from his love of science 
                                 and dedication to producing research in the specialty. Apart from being Editor-in-Chief 
                                 of MBJ, he has published a total of 330 publications in his area of expertise.<br/>
-                            </p>
+                            
                             <Link 
-                                className='article-links'
                                 onClick={() => setOpen(!open)}
                                 aria-controls="example-collapse-text"
                                 aria-expanded={open}
+                                style={{ marginTop:'2%'}}
                                 > 
                                 Read more
                             </Link>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-            </section> 
+                            </p>
+                        </div>  
+                        <div className='section-column-editor'>
+                            <h3 className='editor-title'>Professor Brahimi, EHU, Algeria</h3>
+                            <p className='editor-description'>Dr. Yafour's research has centred on screening, early detection and treatment of oral cancer
+                                . His aspiration for high quality research for cancer can be seen from his love of science 
+                                and dedication to producing research in the specialty. Apart from being Editor-in-Chief 
+                                of MBJ, he has published a total of 330 publications in his area of expertise.<br/>
+                           
+                            <Link 
+                                onClick={() => setOpen(!open)}
+                                aria-controls="example-collapse-text"
+                                aria-expanded={open}
+                                style={{ marginTop:'2%'}}
+                                > 
+                                Read more
+                            </Link>
+                            </p>
+                        </div>
+                    </div>
+                </section>
           </Styles>
       </React.Fragment>
     );
@@ -254,5 +394,7 @@ function Home() {
   export default Home;
 
   /**#3f3fb3 
+   * 
+
    * 
   */

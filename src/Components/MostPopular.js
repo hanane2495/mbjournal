@@ -7,27 +7,32 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
-
-
-
-
-
-import {Col, Row} from 'react-bootstrap';
+import styled from 'styled-components'
 
 
 //icons 
 import { FiDownload } from "react-icons/fi";
 
 //images 
-import virus from '../assets/virus.jpg'
-import virus3 from '../assets/virus3.jpg'
-import adn from '../assets/adn.jpg'
-import virus2 from '../assets/virus2.jpg'
+import virus from '../assets/sujet1.jpg'
+import adn from '../assets/sujet2.jpg'
+import virus2 from '../assets/sujet3.jpg'
 
 
+const Styles = styled.div`
+display: flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+@media only screen and (max-width: 790px) {
+    flex-direction:column;
+}
+`;
 
   const useStyles = makeStyles({
     root: {
+      marginBottom:'10%',
+      margin:'2%',  
       maxWidth: 345,
       boxShadow:'5px 10px 20px 1px rgba(0, 0, 0, 0.253)',
     },
@@ -37,8 +42,7 @@ export default function MostPopular() {
 
   return (
     <React.Fragment> 
-        <Row style={{paddingTop:'80px', paddingBottom:'100px'}}>
-            <Col>
+        <Styles>
                 <Card className={classes.root}>
                     <CardActionArea>
                         <CardMedia
@@ -67,8 +71,6 @@ export default function MostPopular() {
                         </Button>
                     </CardActions>
                 </Card>
-            </Col>
-            <Col>
                 <Card className={classes.root}>
                     <CardActionArea>
                         <CardMedia
@@ -97,8 +99,6 @@ export default function MostPopular() {
                         </Button>
                     </CardActions>
                 </Card>
-            </Col>
-            <Col>
                 <Card className={classes.root}>
                     <CardActionArea>
                         <CardMedia
@@ -127,8 +127,7 @@ export default function MostPopular() {
                         </Button>
                     </CardActions>
                </Card>
-            </Col>
-        </Row>
+        </Styles>
     </React.Fragment> 
     
   );
